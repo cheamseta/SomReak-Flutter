@@ -42,7 +42,7 @@ class _CategoryState extends State<CategoryWidget>{
                                 height: 60,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
-                                  borderRadius: BorderRadius.circular(5),
+                                  borderRadius: BorderRadius.circular(15),
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.all(8.0),

@@ -50,7 +50,6 @@ class HomeScreen extends StatelessWidget {
         child: ListView(
             children: <Widget>[
               SlideShowWidget(),
-            
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Text("ប្រជាប្រិយភាព", style: AppTheme.title()),

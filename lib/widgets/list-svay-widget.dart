@@ -3,6 +3,9 @@ import 'package:som_reak/model/svay-model.dart';
 import 'package:flutter/material.dart';
 import 'package:som_reak/services/app-theme.dart';
 
+import '../Screens/detail-screen.dart';
+import '../services/routing.dart';
+
 class ListSvayWidget extends StatefulWidget {
 
   final SvayModel svayModel;
@@ -16,7 +19,8 @@ class ListSvayWidget extends StatefulWidget {
 class _ListViewState extends State<ListSvayWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(
+      child: Container(
       margin: EdgeInsets.only(left: 15, right: 15, bottom: 15),
       padding: EdgeInsets.all(15),
       decoration: BoxDecoration(
@@ -47,6 +51,10 @@ class _ListViewState extends State<ListSvayWidget> {
           )
         ],
       ),
-    );
+    ),
+    onTap: () {
+        Routes.navigateTo(context, () => DetailScreen(svay: widget.svayModel));
+    },
+    ); 
   }
 }
